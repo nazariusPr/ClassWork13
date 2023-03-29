@@ -31,3 +31,14 @@ public:
 	}
 };
 
+template<typename TNum>
+inline TNum CPoint<TNum>::distance(const CPoint& p) const
+{
+	return TNum();
+}
+
+template<typename TNum>
+std::ostream& operator << (std::ostream & os, const CPoint<TNum> A) {
+	A.print_on(os);
+	return os;
+}
