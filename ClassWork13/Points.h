@@ -34,7 +34,7 @@ public:
 template<typename TNum>
 inline TNum CPoint<TNum>::distance(const CPoint& p) const
 {
-	return sqrt(pow(x-p.x,2)+ pow(y - y.x, 2));
+	return sqrt(pow(x-p.x,2)+ pow(y - p.y, 2));
 }
 
 template<typename TNum>
@@ -45,5 +45,5 @@ std::ostream& operator << (std::ostream & os, const CPoint<TNum>& A) {
 
 template<typename TNum>
 CPoint<TNum> operator*(const CPoint <TNum>& p, TNum n) {
-	return CPoint(p.get_x() * n, p.get_y() * n);
+	return CPoint<TNum>(p.get_x() * n, p.get_y() * n);
 }
